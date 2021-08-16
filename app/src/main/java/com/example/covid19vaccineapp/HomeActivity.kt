@@ -3,20 +3,22 @@ package com.example.covid19vaccineapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
+import android.os.Looper
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
-import com.example.covid19vaccineapp.Utilse.Constants
 import com.example.covid19vaccineapp.Utilse.Constants.BottomNavigationIndex.HOME_PAGE
 import com.example.covid19vaccineapp.Utilse.Constants.BottomNavigationIndex.SEARCH_PAGE
 import com.example.covid19vaccineapp.Utilse.Constants.BottomNavigationIndex.CORONA_VIRUS_PAGE
 import com.example.covid19vaccineapp.Utilse.Constants.BottomNavigationIndex.VACCINE_INFO_PAGE
 import com.example.covid19vaccineapp.Utilse.Constants.BottomNavigationIndex.ABOUT_TEAM_PAGE
+import com.example.covid19vaccineapp.Utilse.Constants.StatusFragment.ADD_FRAGMENT
+import com.example.covid19vaccineapp.Utilse.Constants.StatusFragment.REPLACE_FRAGMENT
 import com.example.covid19vaccineapp.Utilse.CsvParser
 import com.example.covid19vaccineapp.Utilse.DataManger
 import com.example.covid19vaccineapp.databinding.ActivityHomeBinding
-import com.example.covid19vaccineapp.fragment.*
+import com.example.covid19vaccineapp.fragments.*
+import com.example.covid19vaccineapp.fragments.fragmentHomePage.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
@@ -26,7 +28,6 @@ class HomeActivity : AppCompatActivity() {
 
     lateinit var binding : ActivityHomeBinding
 
-    var myHomeFragment = HomeFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
@@ -38,11 +39,17 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun startSplashScreen() {
-        Handler().postDelayed(Runnable {
+        Handler(Looper.getMainLooper()).postDelayed(Runnable {
             binding.lottieCovid19Vaccine.visibility = View.INVISIBLE
             binding.fragmentContainerView.visibility = View.VISIBLE
             binding.meowBottomNavigation.visibility = View.VISIBLE
         },5000)
+    }
+
+    fun setup() {
+        setFragment(HomeFragment(), ADD_FRAGMENT)
+        setUpBottomNavigation()
+        openFile()
     }
 
     private fun setUpBottomNavigation() {
@@ -52,28 +59,36 @@ class HomeActivity : AppCompatActivity() {
             add(MeowBottomNavigation.Model(CORONA_VIRUS_PAGE, R.drawable.ic_coronavirus))
             add(MeowBottomNavigation.Model(VACCINE_INFO_PAGE, R.drawable.ic_info))
             add(MeowBottomNavigation.Model(ABOUT_TEAM_PAGE, R.drawable.ic_supervisor))
+            show(HOME_PAGE, true)
+//            setOnReselectListener {
+//                selectMenuBottomNavigation(it)
+//            }
+//            setOnShowListener {
+//                selectMenuBottomNavigation(it)
+//            }
             setOnClickMenuListener {
-                when(it.id){
-                    HOME_PAGE -> setFragment(HomeFragment())
-                    SEARCH_PAGE -> setFragment(SearchFragment())
-                    CORONA_VIRUS_PAGE -> setFragment(CoronaVirusFragment())
-                    VACCINE_INFO_PAGE -> setFragment(VaccineInfoFragment())
-                    ABOUT_TEAM_PAGE -> setFragment(AboutTeamFragment())
+                selectMenuBottomNavigation(it)
                 }
             }
         }
-    }
 
-    private fun setFragment(fragment: Fragment) {
+    private fun selectMenuBottomNavigation(model: MeowBottomNavigation.Model) {
+        when(model.id){
+            HOME_PAGE -> setFragment(HomeFragment(), REPLACE_FRAGMENT)
+            SEARCH_PAGE -> setFragment(SearchFragment(), REPLACE_FRAGMENT)
+            CORONA_VIRUS_PAGE -> setFragment(CoronaVirusFragment(), REPLACE_FRAGMENT)
+            VACCINE_INFO_PAGE -> setFragment(VaccineInfoFragment(), REPLACE_FRAGMENT)
+            ABOUT_TEAM_PAGE -> setFragment(AboutTeamFragment(), REPLACE_FRAGMENT)
+    }
+}
+
+    private fun setFragment(fragment: Fragment, status_fragment: Int) {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(binding.fragmentContainerView.id, fragment)
+        when(status_fragment){
+            ADD_FRAGMENT -> transaction.add(binding.fragmentContainerView.id, fragment)
+            REPLACE_FRAGMENT -> transaction.replace(binding.fragmentContainerView.id, fragment)
+        }
         transaction.commit()
-    }
-
-    fun setup() {
-        setFragment(HomeFragment())
-        setUpBottomNavigation()
-        openFile()
     }
 
     fun addCallBack() {
@@ -84,9 +99,12 @@ class HomeActivity : AppCompatActivity() {
         val inputStream = assets.open("country_vaccinations.csv")
         val buffer = BufferedReader(InputStreamReader(inputStream))
         buffer.forEachLine {
-//            val currentVaccineData = CsvParser().parserData(it)
-//            DataManger.addVaccineDetails(currentVaccineData)
+            val currentVaccineData = CsvParser().parserData(it)
+            DataManger.addVaccineDetails(currentVaccineData)
         }
+//        var x = DataManger.getVaccineDetails().filter {
+//            it.country
+//        }
     }
 
 }

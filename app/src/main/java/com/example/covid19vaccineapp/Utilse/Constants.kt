@@ -18,10 +18,15 @@ object Constants {
     }
 
     object BottomNavigationIndex {
-        const val HOME_PAGE : Int = 0
-        const val SEARCH_PAGE : Int = 1
-        const val CORONA_VIRUS_PAGE : Int = 2
-        const val VACCINE_INFO_PAGE : Int = 3
-        const val ABOUT_TEAM_PAGE : Int = 4
+        const val HOME_PAGE = 0
+        const val SEARCH_PAGE = 1
+        const val CORONA_VIRUS_PAGE = 2
+        const val VACCINE_INFO_PAGE = 3
+        const val ABOUT_TEAM_PAGE = 4
+    }
+
+    object StatusFragment {
+        const val ADD_FRAGMENT : Int = 0
+        const val REPLACE_FRAGMENT : Int = 0
     }
 }

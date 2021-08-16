@@ -33,6 +33,7 @@ android {
     buildFeatures {
         viewBinding true
     }
+
 }
 
 dependencies {
@@ -51,4 +52,8 @@ dependencies {
 
     //lottie animation library
     implementation 'com.airbnb.android:lottie:4.0.0'
+
+    //MPAndroidChart library
+//    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
 }
