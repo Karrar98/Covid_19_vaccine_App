@@ -53,8 +53,12 @@ dependencies {
     //lottie animation library
     implementation 'com.airbnb.android:lottie:4.0.0'
 
+    // chart library
     implementation 'com.github.blackfizz:eazegraph:1.2.2@aar'
     implementation 'com.nineoldandroids:library:2.4.0'
+
+    // circleImageView library
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     //MPAndroidChart library
 //    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'

@@ -11,8 +11,13 @@
     <string name="Paragraph1">Equitable access to safe and effective vaccines is critical to ending the COVID-19 pandemic, so it is hugely encouraging to see so many vaccines proving and going into development. WHO is working tirelessly with partners to develop, manufacture and deploy safe and effective vaccines.</string>
     <string name="Paragraph2">Safe and effective vaccines are a game-changing tool: but for the foreseeable future we must continue wearing masks, cleaning our hands, ensuring good ventilation indoors, physically distancing and avoiding crowds.\n \nBeing vaccinated does not mean that we can throw caution to the wind and put ourselves and others at risk, particularly because research is still ongoing into how much vaccines protect not only against disease but also against infection and transmission.</string>
     <string name="Paragraph3">See <a href="https://www.who.int/publications/m/item/draft-landscape-of-covid-19-candidate-vaccines">WHO’s landscape of COVID-19 vaccine candidates </a> for the latest information on vaccines in clinical and pre-clinical development, generally updated twice a week.<a href="https://covid19.who.int/">WHO’s COVID-19 dashboard </a>, updated daily, also features the number of vaccine doses administered globally. \n \nBut it’s not vaccines that will stop the pandemic, it’s vaccination. We must ensure fair and equitable access to vaccines, and ensure every country receives them and can roll them out to protect their people, starting with the most vulnerable.</string>
-    <string name="aboutus">The most powerful and integrated COVID-19 vaccine information and the latest developments on the Internet with a wide network of information that is registered on the World Health Organization (WHO) website. Its popularity among users is determined by its success rate which we will see in the initiative (The Chance) </string>
-    <string name="teamcherry">By: Istapraq Ahmed 🍒\n Karrar Jabbar 🍒\n Mohammed Maher(L) 🍒\n Ruqaya Nia\'ma 🍒\n Zainab Mahmood 🍒\n</string>
+    <string name="about_app">The most powerful and integrated COVID-19 vaccine information and the latest developments on the Internet with a wide network of information that is registered on the World Health Organization (WHO) website. Its popularity among users is determined by its success rate which we will see in the initiative (The Chance) </string>
     <string name="bareq">manager in charge :\n Bareq AL-Taamah 😇</string>
     <string name="vaccine_information">Vaccine information</string>
+    <string name="mohammed_maher">Mohammed Maher 🍒</string>
+    <string name="karrar_jabbar">Karrar Jabbar 🍒</string>
+    <string name="ruqaya_nia_ma">Ruqaya Nia\'ma 🍒</string>
+    <string name="zainab_mahmood">Zainab Mahmood 🍒</string>
+    <string name="team_leader">Team Leader</string>
+    <string name="team_member">Team Member</string>
 </resources>

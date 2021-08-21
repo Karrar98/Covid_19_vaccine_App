@@ -10,6 +10,8 @@ object DataManger {
 
     fun addVaccineDetails(vaccineData: VaccineDetails) = vaccineDetailsList.add(vaccineData)
 
+    fun getListCountry() : MutableSet<String> = vaccineDetailsList.map { it.country }.toMutableSet()
+
     fun getVaccineDetails() = vaccineDetailsList
 
     fun getCountry(country: String) = vaccineDetailsList.let {
@@ -21,4 +23,6 @@ object DataManger {
             valueTransform = { listDataCountry }
         )
     }
+
+    
 }
