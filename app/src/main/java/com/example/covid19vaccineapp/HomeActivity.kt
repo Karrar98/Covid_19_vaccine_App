@@ -17,10 +17,11 @@ import com.example.covid19vaccineapp.Utilse.Constants.StatusFragment.REPLACE_FRA
 import com.example.covid19vaccineapp.Utilse.CsvParser
 import com.example.covid19vaccineapp.Utilse.DataManger
 import com.example.covid19vaccineapp.databinding.ActivityHomeBinding
-import com.example.covid19vaccineapp.fragments.*
 import com.example.covid19vaccineapp.fragments.fragmentHomePage.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
+import android.view.Window
+import android.view.WindowManager
 
 class HomeActivity : AppCompatActivity() {
 
@@ -32,6 +33,11 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val window: Window = this.window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        window.statusBarColor = this.resources.getColor(R.color.white)
 
         startSplashScreen()
         setup()
@@ -56,16 +62,10 @@ class HomeActivity : AppCompatActivity() {
         binding.meowBottomNavigation.apply {
             add(MeowBottomNavigation.Model(HOME_PAGE, R.drawable.ic_home))
             add(MeowBottomNavigation.Model(SEARCH_PAGE, R.drawable.ic_search))
-            add(MeowBottomNavigation.Model(CORONA_VIRUS_PAGE, R.drawable.ic_coronavirus))
+            add(MeowBottomNavigation.Model(CORONA_VIRUS_PAGE, R.drawable.ic_virus4))
             add(MeowBottomNavigation.Model(VACCINE_INFO_PAGE, R.drawable.ic_info))
             add(MeowBottomNavigation.Model(ABOUT_TEAM_PAGE, R.drawable.ic_supervisor))
             show(HOME_PAGE, true)
-//            setOnReselectListener {
-//                selectMenuBottomNavigation(it)
-//            }
-//            setOnShowListener {
-//                selectMenuBottomNavigation(it)
-//            }
             setOnClickMenuListener {
                 selectMenuBottomNavigation(it)
                 }
@@ -95,16 +95,13 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-    private fun openFile() {
+    fun openFile() {
         val inputStream = assets.open("country_vaccinations.csv")
         val buffer = BufferedReader(InputStreamReader(inputStream))
         buffer.forEachLine {
             val currentVaccineData = CsvParser().parserData(it)
             DataManger.addVaccineDetails(currentVaccineData)
         }
-//        var x = DataManger.getVaccineDetails().filter {
-//            it.country
-//        }
     }
 
 }

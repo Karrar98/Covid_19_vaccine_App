@@ -10,31 +10,30 @@ import androidx.viewbinding.ViewBinding
 
 abstract class BaseFragment<VB : ViewBinding> : Fragment(){
 
-    abstract val LOG_TAG : String
-    abstract val bindingInflater : (LayoutInflater, ViewGroup?, Boolean) -> VB
-    private lateinit var _binding : VB
-    protected val binding
-    get() = _binding as VB
+    abstract val LOG_TAG: String
+    abstract  val bindingInflater: (LayoutInflater) -> VB
+    private var _binding: ViewBinding? = null
+    protected val binding: VB?
+        get() = _binding as VB?
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setup()
+        addCallBack()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = bindingInflater(inflater, container, false)
-        return _binding.root
+        _binding = bindingInflater(layoutInflater)
+        return _binding?.root
     }
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setUp()
-        addCallBack()
-    }
-
-    abstract fun setUp()
-
-    abstract fun addCallBack()
+    abstract  fun setup()
+    abstract  fun addCallBack()
 
     protected fun log(value : String) = Log.d(LOG_TAG, value)
 }

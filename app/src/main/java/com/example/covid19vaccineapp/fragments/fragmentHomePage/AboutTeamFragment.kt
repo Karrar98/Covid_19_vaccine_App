@@ -20,9 +20,9 @@ class AboutTeamFragment : BaseFragment<FragmentAboutTeamBinding>() {
         return inflater.inflate(R.layout.fragment_about_team, container, false)
     }
 
-    override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentAboutTeamBinding = FragmentAboutTeamBinding::inflate
+    override val bindingInflater: (LayoutInflater) -> FragmentAboutTeamBinding = FragmentAboutTeamBinding::inflate
 
-    override fun setUp() {
+    override fun setup() {
 
     }
 

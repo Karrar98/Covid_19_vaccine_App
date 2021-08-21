@@ -9,7 +9,7 @@
         android:title="Search" />
 
     <item android:id="@+id/coronaPage"
-        android:icon="@drawable/ic_coronavirus"
+        android:icon="@drawable/ic_virus4"
         android:title="Corona" />
 
     <item android:id="@+id/vaccinePage"

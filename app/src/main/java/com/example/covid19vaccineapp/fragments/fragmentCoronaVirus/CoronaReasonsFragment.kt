@@ -1,19 +1,22 @@
 package com.example.covid19vaccineapp.fragments.fragmentCoronaVirus
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import com.example.covid19vaccineapp.R
+import com.example.covid19vaccineapp.databinding.FragmentCoronaReasonsBinding
+import com.example.covid19vaccineapp.fragments.BaseFragment
 
-class CoronaReasonsFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_corona_reasons, container, false)
+class CoronaReasonsFragment : BaseFragment<FragmentCoronaReasonsBinding>() {
+    override val LOG_TAG: String = "CORONA_REASONS_FRAGMENT"
+    override val bindingInflater: (LayoutInflater) -> FragmentCoronaReasonsBinding =
+        FragmentCoronaReasonsBinding::inflate
+
+    override fun setup() {
+
     }
+
+    override fun addCallBack() {
+
+    }
+
+
 }
