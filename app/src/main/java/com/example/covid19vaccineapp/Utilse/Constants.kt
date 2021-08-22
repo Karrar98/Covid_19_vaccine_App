@@ -29,4 +29,11 @@ object Constants {
         const val ADD_FRAGMENT : Int = 0
         const val REPLACE_FRAGMENT : Int = 0
     }
+
+    object CoronaTabIndex{
+        const val CORONA : Int = 0
+        const val CORONA_REASONS : Int = 1
+        const val CORONA_SYNDROME : Int = 2
+        const val CORONA_PROTECTION : Int = 3
+    }
 }

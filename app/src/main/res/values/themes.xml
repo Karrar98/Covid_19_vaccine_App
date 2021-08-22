@@ -21,10 +21,10 @@
         <item name="android:elevation">60dp</item>
     </style>
 
-    <!--  style text bold  -->
-    <style name="bold">
-        <item name="android:textStyle">bold</item>
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
     </style>
+
 
     <!--  style search view city   -->
     <style name="searchViewCity">
