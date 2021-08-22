@@ -3,7 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/drawable/dailyshape.xml" value="0.2703125" />
+        <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/drawable/ic_coronavirus.xml" value="0.2703125" />
+        <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/drawable/ic_expand.xml" value="0.2703125" />
+        <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/drawable/ic_home.xml" value="0.2703125" />
+        <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/drawable/ic_info.xml" value="0.2703125" />
+        <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/drawable/ic_location.xml" value="0.2703125" />
+        <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/drawable/ic_map.xml" value="0.2703125" />
+        <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/drawable/ic_search.xml" value="0.2703125" />
+        <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/drawable/ic_supervisor.xml" value="0.2703125" />
         <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/drawable/shapecoronavirus.xml" value="0.2703125" />
         <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/drawable/shaperelativlayout.xml" value="0.2703125" />
         <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
