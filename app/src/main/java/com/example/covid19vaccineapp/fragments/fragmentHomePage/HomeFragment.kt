@@ -14,11 +14,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override val bindingInflater: (LayoutInflater) -> FragmentHomeBinding = FragmentHomeBinding::inflate
 
     override fun setup() {
-
     }
 
     override fun addCallBack() {
-
     }
 
     private fun setData(country: String) {

@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     android:id="@+id/root"
     tools:context=".HomeActivity"
     android:background="#edf0f3">
@@ -22,16 +23,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
+            app:titleEnabled="false"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
 
             <ImageView
                 android:id="@+id/doctors"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="-60dp"
                 android:layout_gravity="center"
                 android:scaleType="centerCrop"
                 android:src="@drawable/vaccinationcovid1"
                 app:layout_collapseMode="parallax"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBar_home_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="Covid-19 Statistics"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                app:layout_collapseMode="pin"/>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -44,7 +56,7 @@
         android:background="@drawable/shaperelativlayout"
         app:layout_anchor="@+id/nestedScrollView"
         app:layout_anchorGravity="center"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/subconstraint"
