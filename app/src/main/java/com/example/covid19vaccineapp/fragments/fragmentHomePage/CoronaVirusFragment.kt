@@ -5,7 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import com.example.covid19vaccineapp.databinding.FragmentCoronaVirusBinding
 import com.example.covid19vaccineapp.fragments.BaseFragment
-import com.example.covid19vaccineapp.adapter.CoronaVirusPagerAdapter
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentPagerAdapter
+import androidx.viewpager.widget.ViewPager
+import com.example.covid19vaccineapp.R
+import com.google.android.material.tabs.TabLayout
+import com.example.covid19vaccineapp.fragments.fragmentCoronaVirus.CoronaFragment
+import com.example.covid19vaccineapp.fragments.fragmentCoronaVirus.CoronaProtectionFragment
+import com.example.covid19vaccineapp.fragments.fragmentCoronaVirus.CoronaReasonsFragment
+import com.example.covid19vaccineapp.fragments.fragmentCoronaVirus.CoronaSyndromeFragment
 
 class CoronaVirusFragment : BaseFragment<FragmentCoronaVirusBinding>() {
 
@@ -13,12 +22,16 @@ class CoronaVirusFragment : BaseFragment<FragmentCoronaVirusBinding>() {
 
     override val bindingInflater: (LayoutInflater) -> FragmentCoronaVirusBinding = FragmentCoronaVirusBinding::inflate
 
-    private lateinit var coronaVirusPagerAdapter: CoronaVirusPagerAdapter
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        coronaVirusPagerAdapter = CoronaVirusPagerAdapter(childFragmentManager)
-        binding!!.coronaPageView.adapter = coronaVirusPagerAdapter
+        binding!!.apply {
+            setupViewPager(coronaPageView)
+            tabs.setupWithViewPager(coronaPageView)
+
+            tabs.getTabAt(0)?.setIcon(R.drawable.ic_virus4)
+            tabs.getTabAt(1)?.setIcon(R.drawable.ic_virus4)
+            tabs.getTabAt(2)?.setIcon(R.drawable.ic_virus4)
+            tabs.getTabAt(3)?.setIcon(R.drawable.ic_virus4)
+        }
     }
 
     override fun setup() {
@@ -27,5 +40,33 @@ class CoronaVirusFragment : BaseFragment<FragmentCoronaVirusBinding>() {
 
     override fun addCallBack() {
 
+    }
+
+    private fun setupViewPager(viewPager: ViewPager) {
+        viewPager.adapter = fragmentManager?.let {
+            Adapter(it).apply {
+                addFragment(CoronaFragment())            //, "Corona")
+                addFragment(CoronaReasonsFragment())     //, "Corona Reasons")
+                addFragment(CoronaSyndromeFragment())    //, "Corona Syndrome")
+                addFragment(CoronaProtectionFragment())  //, "Corona Protection")
+            }
+        }
+    }
+
+    internal class Adapter(fragmentManager: FragmentManager)
+        : FragmentPagerAdapter(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+        private val fragments: MutableList<Fragment> = ArrayList()
+//        private val titles: MutableList<String> = ArrayList()
+
+        fun addFragment(fragment: Fragment) { // , title: String
+            fragments.add(fragment)
+//            titles.add(title)
+        }
+
+        override fun getItem(position: Int): Fragment = fragments[position]
+
+        override fun getCount(): Int = fragments.size
+
+//        override fun getPageTitle(position: Int): CharSequence? = titles[position]
     }
 }

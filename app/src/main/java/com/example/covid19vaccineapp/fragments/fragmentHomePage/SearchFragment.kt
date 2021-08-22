@@ -12,7 +12,10 @@ import java.util.*
 import org.eazegraph.lib.models.PieModel
 import android.R
 import android.graphics.Color
+import com.github.mikephil.charting.data.PieDataSet
+import com.github.mikephil.charting.data.PieEntry
 import org.eazegraph.lib.charts.PieChart
+import kotlin.collections.ArrayList
 
 class SearchFragment : BaseFragment<FragmentSearchBinding>(){
 
@@ -70,9 +73,9 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(){
                 txtIsoCode.text = data.iso_code
                 txtTotalVaccinations.text = data.total_vaccinations.toInt().toString()
 
-                pieChart.addPieSlice(PieModel("total_vaccinations", data.total_vaccinations_per_hundred.toFloat(), Color.parseColor("#FF0000")))
-                pieChart.addPieSlice(PieModel("people_vaccinated", data.people_vaccinated_per_hundred.toFloat(), Color.parseColor("#00FF00")))
-                pieChart.addPieSlice(PieModel("people_fully_vaccinated", data.people_fully_vaccinated_per_hundred.toFloat(), Color.parseColor("#0000FF")))
+                pieChart.addPieSlice(PieModel("Total Vaccinations", data.total_vaccinations_per_hundred.toFloat(), Color.parseColor("#FF0000")))
+                pieChart.addPieSlice(PieModel("People Vaccinated", data.people_vaccinated_per_hundred.toFloat(), Color.parseColor("#00FF00")))
+                pieChart.addPieSlice(PieModel("People Fully Vaccinated", data.people_fully_vaccinated_per_hundred.toFloat(), Color.parseColor("#0000FF")))
 
                 pieChart.startAnimation()
             }
