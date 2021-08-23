@@ -22,11 +22,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override fun setup() {
         setData(DataManger.getCountryIndex())
         binding!!.apply {
-            button.setOnClickListener {
+            nextCountry.setOnClickListener {
                 DataManger.nextCountry()
                 setData(DataManger.getCountryIndex())
             }
-            button2.setOnClickListener {
+            previousCountry.setOnClickListener {
                 DataManger.previousCountry()
                 setData(DataManger.getCountryIndex())
             }
@@ -40,7 +40,20 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     private fun setData(countryIndex: Int) {
         val data = DataManger.getDataCountry(countryIndex)
         binding!!.apply {
-            textcountry.text = data.country
+            txtCountryName.text = data.country
+            txtIsoCode.text = data.iso_code
+            peopleVaccine.text = data.people_vaccinated_per_hundred.toString() + " %"
+            peopleFullyVaccine.text = data.people_fully_vaccinated_per_hundred.toString() + " %"
+            peopleTotalVaccine.text = data.total_vaccinations_per_hundred.toString() + " %"
+
+            pieChart.addPieSlice(PieModel("total_vaccinations",
+                data.total_vaccinations_per_hundred.toFloat(), Color.parseColor("#0c422d")))
+            pieChart.addPieSlice(PieModel("people_vaccinated",
+                data.people_vaccinated_per_hundred.toFloat(), Color.parseColor("#10a870")))
+            pieChart.addPieSlice(PieModel("people_fully_vaccinated",
+                data.people_fully_vaccinated_per_hundred.toFloat(), Color.parseColor("#76cba8")))
+
+            pieChart.startAnimation()
 
 //                var visitors: ArrayList<BarEntry> = arrayListOf()
 //                visitors.add(BarEntry(0f, data.total_vaccinations_per_hundred.toFloat()))

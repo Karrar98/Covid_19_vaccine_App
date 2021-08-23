@@ -1,6 +1,5 @@
 package com.example.covid19vaccineapp.fragments.fragmentHomePage
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.SearchView
@@ -10,9 +9,7 @@ import com.example.covid19vaccineapp.databinding.FragmentSearchBinding
 import com.example.covid19vaccineapp.fragments.BaseFragment
 import java.util.*
 import org.eazegraph.lib.models.PieModel
-import android.R
 import android.graphics.Color
-import org.eazegraph.lib.charts.PieChart
 
 class SearchFragment : BaseFragment<FragmentSearchBinding>(){
 
@@ -70,9 +67,12 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(){
                 txtIsoCode.text = data.iso_code
                 txtTotalVaccinations.text = data.total_vaccinations.toInt().toString()
 
-                pieChart.addPieSlice(PieModel("total_vaccinations", data.total_vaccinations_per_hundred.toFloat(), Color.parseColor("#FF0000")))
-                pieChart.addPieSlice(PieModel("people_vaccinated", data.people_vaccinated_per_hundred.toFloat(), Color.parseColor("#00FF00")))
-                pieChart.addPieSlice(PieModel("people_fully_vaccinated", data.people_fully_vaccinated_per_hundred.toFloat(), Color.parseColor("#0000FF")))
+                pieChart.addPieSlice(PieModel("total_vaccinations",
+                    data.total_vaccinations_per_hundred.toFloat(), Color.parseColor("#0c422d")))
+                pieChart.addPieSlice(PieModel("people_vaccinated",
+                    data.people_vaccinated_per_hundred.toFloat(), Color.parseColor("#10a870")))
+                pieChart.addPieSlice(PieModel("people_fully_vaccinated",
+                    data.people_fully_vaccinated_per_hundred.toFloat(), Color.parseColor("#76cba8")))
 
                 pieChart.startAnimation()
             }
@@ -88,6 +88,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(){
             cardCountry.isVisible = state
             lottieSearch.isVisible = !state
             pieChart.isVisible = state
+            shapesearchimg.isVisible = state
         }
     }
 }
