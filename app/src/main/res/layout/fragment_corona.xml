@@ -6,14 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="#84abbe"
+    android:background="@drawable/shapecoronavirus"
     tools:context=".fragments.fragmentHomePage.CoronaVirusFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:fitsSystemWindows="true"
-        android:background="#84abbe">
+        android:fitsSystemWindows="true">
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -40,66 +39,66 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/dailyshape"
+        android:background="@drawable/shapecoronavirus"
         app:layout_anchorGravity="center"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="52dp"
-                android:background="@drawable/shapecoronavirus"
-                app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="52dp"
+            android:background="@drawable/shapecoronavirus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/textViewTitle"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="What do you know about covid 19?"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/textView"
-                    style="@style/textViewTitle"
-                    android:layout_marginTop="30dp"
-                    android:gravity="center"
-                    android:text="What do you know about covid 19?"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/imageVirusBig"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-                <ImageView
-                    android:id="@+id/imageVirusBig"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/c"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            <ImageView
+                android:id="@+id/imageVirusSmall"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-                <ImageView
-                    android:id="@+id/imageVirusSmall"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="8dp"
-                    android:src="@drawable/c"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.25"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/textViewParagraph"
+                android:text="@string/whatIsCovid"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-                <TextView
-                    android:id="@+id/textView6"
-                    style="@style/textViewParagraph"
-                    android:text="@string/whatIsCovid"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+            <TextView
+                android:id="@+id/coronaInfo"
+                style="@style/textViewParagraph"
+                android:text="@string/coronaInfo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageVirusBig" />
 
-                <TextView
-                    android:id="@+id/coronaInfo"
-                    style="@style/textViewParagraph"
-                    android:text="@string/coronaInfo"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageVirusBig" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
 
