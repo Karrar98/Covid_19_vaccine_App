@@ -63,8 +63,7 @@ class CoronaVirusFragment : BaseFragment<FragmentCoronaVirusBinding>() {
         private val fragments: MutableList<Fragment> = ArrayList()
 //        private val titles: MutableList<String> = ArrayList()
 
-        fun addF
-        ragment(fragment: Fragment) {  // , title: String
+        fun addFragment(fragment: Fragment) {  // , title: String
             fragments.add(fragment)
 //            titles.add(title)
         }

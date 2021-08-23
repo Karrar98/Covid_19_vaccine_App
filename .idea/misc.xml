@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/drawable/dailyshape.xml" value="0.2703125" />
+        <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/layout/fragment_corona.xml" value="0.25416666666666665" />
+        <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/layout/fragment_corona_protection.xml" value="0.25416666666666665" />
+        <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/layout/fragment_corona_reasons.xml" value="0.25416666666666665" />
         <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/layout/fragment_corona_syndrome.xml" value="0.25416666666666665" />
         <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/layout/fragment_corona_virus.xml" value="0.25416666666666665" />
         <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/layout/fragment_search.xml" value="0.25416666666666665" />

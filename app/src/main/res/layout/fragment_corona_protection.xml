@@ -4,17 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:background="@color/bg_color">
 
     <TextView
+        android:id="@+id/title_protection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="30dp"
-        android:text="Page Four"
+        android:padding="16dp"
+        android:text="Protection"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_protection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="30dp"
+        android:text="There's currently no vaccine guaranteed to prevent this disease. You can protect yourself and help prevent spreading the virus if you:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_protection" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/anim_wash_hands"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintBottom_toTopOf="@+id/anim_use_mask"
+        app:layout_constraintEnd_toStartOf="@+id/anim_hands_sanitizer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_protection"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/covid_icon_wash_hands" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/anim_hands_sanitizer"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintBottom_toTopOf="@+id/anim_stay_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/anim_wash_hands"
+        app:layout_constraintTop_toBottomOf="@+id/text_protection"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/covid_icon_use_hand_sanitizer" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/anim_use_mask"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintBottom_toTopOf="@id/guideLine_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/anim_stay_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/anim_wash_hands"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/covid_icon_use_a_mask" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/anim_stay_home"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintBottom_toTopOf="@id/guideLine_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/anim_use_mask"
+        app:layout_constraintTop_toBottomOf="@+id/anim_hands_sanitizer"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/covid_icon_stay_at_home" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
