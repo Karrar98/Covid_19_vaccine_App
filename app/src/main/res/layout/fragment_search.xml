@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     android:background="@color/bg_color"
     tools:context=".fragments.fragmentHomePage.SearchFragment">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar_search_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/bg_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <SearchView
         android:id="@+id/searchViewCountry"
@@ -17,10 +25,10 @@
         android:forceDarkAllowed="false"
         android:iconifiedByDefault="false"
         android:paddingTop="1dp"
-        android:queryHint="Search Hint"
+        android:queryHint="Country"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/appBar_search_fragment" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_country"
