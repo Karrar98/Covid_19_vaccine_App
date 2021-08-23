@@ -82,6 +82,8 @@
                 android:id="@+id/dataCountry"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtTitle">
 
                 <ImageView
@@ -131,7 +133,7 @@
                     android:paddingStart="0dp"
                     android:text="Iraq"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/txtCountryName"
                     app:layout_constraintStart_toEndOf="@+id/txtCountryName" />
@@ -141,15 +143,15 @@
                     style="@style/textViewParagraph"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
                     android:gravity="center_vertical"
                     android:padding="6dp"
                     android:text="20.5%"
                     android:textColor="#0a007d"
                     android:textStyle="bold"
-                    android:layout_marginTop="6dp"
-                    app:layout_constraintTop_toBottomOf="@+id/txtIsoCode"
                     app:layout_constraintEnd_toStartOf="@+id/txt_vaccine"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtIsoCode" />
 
                 <TextView
                     android:id="@+id/txt_vaccine"
@@ -160,9 +162,9 @@
                     android:textColor="#0a007d"
                     android:textSize="14sp"
                     android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/people_vaccine"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintBottom_toBottomOf="@+id/people_vaccine"
                     app:layout_constraintStart_toEndOf="@+id/people_vaccine"
                     app:layout_constraintTop_toTopOf="@+id/people_vaccine" />
 
@@ -171,15 +173,15 @@
                     style="@style/textViewParagraph"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
                     android:gravity="center_vertical"
                     android:padding="6dp"
                     android:text="20.5%"
-                    android:layout_marginTop="12dp"
                     android:textColor="#0a007d"
                     android:textStyle="bold"
-                    app:layout_constraintTop_toBottomOf="@+id/people_vaccine"
                     app:layout_constraintEnd_toStartOf="@+id/txt_fully_vaccine"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/people_vaccine" />
 
                 <TextView
                     android:id="@+id/txt_fully_vaccine"
@@ -200,15 +202,15 @@
                     style="@style/textViewParagraph"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
                     android:gravity="center_vertical"
                     android:padding="6dp"
                     android:text="20.5%"
                     android:textColor="#0a007d"
                     android:textStyle="bold"
-                    android:layout_marginTop="12dp"
-                    app:layout_constraintTop_toBottomOf="@+id/people_fully_vaccine"
                     app:layout_constraintEnd_toStartOf="@+id/txt_total_vaccine"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/people_fully_vaccine" />
 
                 <TextView
                     android:id="@+id/txt_total_vaccine"
