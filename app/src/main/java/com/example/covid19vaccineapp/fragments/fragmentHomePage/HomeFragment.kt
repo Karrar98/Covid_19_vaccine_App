@@ -47,11 +47,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             peopleTotalVaccine.text = data.total_vaccinations_per_hundred.toString() + " %"
 
             pieChart.addPieSlice(PieModel("total_vaccinations",
-                data.total_vaccinations_per_hundred.toFloat(), Color.parseColor("#0c422d")))
+                data.total_vaccinations_per_hundred.toFloat(), Color.parseColor("#fed60e")))
             pieChart.addPieSlice(PieModel("people_vaccinated",
-                data.people_vaccinated_per_hundred.toFloat(), Color.parseColor("#10a870")))
+                data.people_vaccinated_per_hundred.toFloat(), Color.parseColor("#56b8f1")))
             pieChart.addPieSlice(PieModel("people_fully_vaccinated",
-                data.people_fully_vaccinated_per_hundred.toFloat(), Color.parseColor("#76cba8")))
+                data.people_fully_vaccinated_per_hundred.toFloat(), Color.parseColor("#fe6da7")))
 
             pieChart.startAnimation()
 

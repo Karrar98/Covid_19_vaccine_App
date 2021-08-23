@@ -26,6 +26,9 @@
         <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/layout/fragment_search.xml" value="0.25416666666666665" />
         <entry key="..\:/Team Cherry Projects/Covid_19_vaccine_App/app/src/main/res/layout/fragment_vaccine_info.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ASUS-1/Desktop/Project/Covid_19_vaccine_App/app/src/main/res/drawable/shaperelativlayout.xml" value="0.2125" />
+        <entry key="..\:/Users/ASUS-1/Desktop/Project/Covid_19_vaccine_App/app/src/main/res/layout/fragment_about_team.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/ASUS-1/Desktop/Project/Covid_19_vaccine_App/app/src/main/res/layout/fragment_home.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/drawable/box_search_view.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/activity_home.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/activity_main.xml" value="0.209375" />
@@ -47,7 +50,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

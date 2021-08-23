@@ -9,14 +9,14 @@
     android:fitsSystemWindows="true"
     android:id="@+id/root"
     tools:context=".HomeActivity"
-    android:background="#edf0f3">
+    android:background="#fff">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="330dp"
         android:fitsSystemWindows="true"
-        android:background="#edf0f3">
+        android:background="#fff">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsingToolBar"
@@ -147,7 +147,7 @@
                     android:gravity="center_vertical"
                     android:padding="6dp"
                     android:text="20.5%"
-                    android:textColor="#0a007d"
+                    android:textColor="#000"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toStartOf="@+id/txt_vaccine"
                     app:layout_constraintStart_toStartOf="parent"
@@ -159,7 +159,7 @@
                     android:layout_height="wrap_content"
                     android:padding="6dp"
                     android:text="@string/people_vaccine"
-                    android:textColor="#0a007d"
+                    android:textColor="#000"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/people_vaccine"
@@ -177,7 +177,7 @@
                     android:gravity="center_vertical"
                     android:padding="6dp"
                     android:text="20.5%"
-                    android:textColor="#0a007d"
+                    android:textColor="#000"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toStartOf="@+id/txt_fully_vaccine"
                     app:layout_constraintStart_toStartOf="parent"
@@ -189,7 +189,7 @@
                     android:layout_height="wrap_content"
                     android:padding="6dp"
                     android:text="@string/fully_vaccine"
-                    android:textColor="#0a007d"
+                    android:textColor="#000"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/people_fully_vaccine"
@@ -206,7 +206,7 @@
                     android:gravity="center_vertical"
                     android:padding="6dp"
                     android:text="20.5%"
-                    android:textColor="#0a007d"
+                    android:textColor="#000"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toStartOf="@+id/txt_total_vaccine"
                     app:layout_constraintStart_toStartOf="parent"
@@ -218,7 +218,7 @@
                     android:layout_height="wrap_content"
                     android:padding="6dp"
                     android:text="@string/total_vaccine"
-                    android:textColor="#0a007d"
+                    android:textColor="#000"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
