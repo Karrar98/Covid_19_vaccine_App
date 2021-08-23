@@ -28,4 +28,9 @@
     <string name="transmitted_by_touching_surfaces">transmitted by touching surfaces</string>
     <string name="eating_fruit_without_cleaning_it">Eating fruit without cleaning it</string>
     <string name="touch_street_animals">touch street animals</string>
+    <string name="coronavirus_pandemic_covid_19">Coronavirus Pandemic (COVID-19)</string>
+
+    <string name="people_vaccine">of the world population has received at least one dose of a COVID-19 vaccine</string>
+    <string name="fully_vaccine">is fully vaccinated.</string>
+    <string name="total_vaccine">is total vaccinated.</string>
 </resources>

@@ -29,7 +29,7 @@ class CoronaVirusFragment : BaseFragment<FragmentCoronaVirusBinding>() {
     private lateinit var coronaVirusPagerAdapter: CoronaVirusPagerAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        coronaVirusPagerAdapter = CoronaVirusPagerAdapter(childFragmentManager)
+        coronaVirusPagerAdapter = CoronaVirusPagerAdapter(childFragmentManager, binding!!)
         binding!!.coronaViewpager.adapter = coronaVirusPagerAdapter
     }
 
