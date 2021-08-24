@@ -34,22 +34,8 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        val window: Window = this.window
-//        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-//        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-//        window.statusBarColor = this.resources.getColor(R.color.white)
-
-        startSplashScreen()
         setup()
         addCallBack()
-    }
-
-    private fun startSplashScreen() {
-        Handler(Looper.getMainLooper()).postDelayed(Runnable {
-            binding.lottieCovid19Vaccine.visibility = View.INVISIBLE
-            binding.fragmentContainerView.visibility = View.VISIBLE
-            binding.meowBottomNavigation.visibility = View.VISIBLE
-        },5000)
     }
 
     fun setup() {
