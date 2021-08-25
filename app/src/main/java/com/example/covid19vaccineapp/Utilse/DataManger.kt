@@ -7,6 +7,7 @@ import java.util.Locale.getDefault
 object DataManger {
     private val vaccineDetailsList = mutableListOf<VaccineDetails>()
     private var listDataCountry = mutableListOf<VaccineDetails>()
+    private var lastDataCountries = mutableListOf<VaccineDetails>()
     private var countryIndex = 0
 
     fun addVaccineDetails(vaccineData: VaccineDetails) = vaccineDetailsList.add(vaccineData)
@@ -43,12 +44,17 @@ object DataManger {
         return countryIndex
     }
 
-    fun getDataCountry(countryIndex: Int) : VaccineDetails {
+
+
+    fun getDataCountry() : MutableList<VaccineDetails> {
         lateinit var data: VaccineDetails
-        getCountry(getListCountry().elementAt(countryIndex)).forEach { dataCountry ->
-            data = dataCountry.value[dataCountry.value.size - 1]
+        getListCountry().forEach {
+            getCountry(it).forEach { dataCountry ->
+                data = dataCountry.value[dataCountry.value.size - 1]
+                lastDataCountries.add(data)
+            }
         }
-        return data
+        return lastDataCountries
     }
     
 }
