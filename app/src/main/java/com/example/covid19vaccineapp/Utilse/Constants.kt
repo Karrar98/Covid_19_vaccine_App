@@ -1,6 +1,8 @@
 package com.example.covid19vaccineapp.Utilse
 
 object Constants {
+
+    const val VACCINE = "Country Vaccine Details"
     object ColumnVaccineData {
         const val COUNTRY = 0
         const val ISO_CODE = 1
