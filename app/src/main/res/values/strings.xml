@@ -33,4 +33,12 @@
     <string name="people_vaccine">of the world population has received at least one dose of a COVID-19 vaccine</string>
     <string name="fully_vaccine">is fully vaccinated.</string>
     <string name="total_vaccine">is total vaccinated.</string>
+    <string name="people_may_be_sick_with_the_virus_for_1_to_14_days_before_developing_any_symptoms">People may be sick with the virus for 1 to 14 days before developing any symptoms.</string>
+    <string name="there_s_currently_no_vaccine_guaranteed_to_prevent_this_disease_you_can_protect_yourself_and_help_prevent_spreading_the_virus_if_you">There\'s currently no vaccine guaranteed to prevent this disease. You can protect yourself and help prevent spreading the virus if you:</string>
+    <string name="stay_home">Stay Home</string>
+    <string name="use_mask">Use Mask</string>
+    <string name="social_distancing">Social Distancing</string>
+    <string name="use_wash">Use Wash</string>
+    <string name="hand_sanitizer">Hand Sanitizer</string>
+    <string name="protection">Protection</string>
 </resources>

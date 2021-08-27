@@ -1,11 +1,14 @@
 package com.example.covid19vaccineapp.adapter
 
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class CoronaVirusPagerAdapter(fm: Fragment, private val listFragment: List<Fragment>) : FragmentStateAdapter(fm) {
-    override fun getItemCount() = listFragment.size
+class CoronaVirusPagerAdapter(fm: FragmentManager, private val listFragment: List<Fragment>) : FragmentStatePagerAdapter(fm) {
 
-    override fun createFragment(position: Int) = listFragment[position]
+    override fun getCount() = listFragment.size
+
+    override fun getItem(position: Int) = listFragment[position]
 
 }

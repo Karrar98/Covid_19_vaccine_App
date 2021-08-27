@@ -9,7 +9,8 @@ import com.example.covid19vaccineapp.R
 import com.example.covid19vaccineapp.databinding.ItemCountryBinding
 import com.example.covid19vaccineapp.model.VaccineDetails
 
-class CountryAdapter(val list: MutableList<VaccineDetails>) : RecyclerView.Adapter<CountryAdapter.CountryHolderView>() {
+class CountryAdapter(private val list: MutableList<VaccineDetails>, private val listener: CountryInteractionListener) :
+    RecyclerView.Adapter<CountryAdapter.CountryHolderView>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryHolderView {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_country, parent, false)
@@ -25,13 +26,11 @@ class CountryAdapter(val list: MutableList<VaccineDetails>) : RecyclerView.Adapt
             txtPeopleFullyVaccine.text = currentCountry.people_fully_vaccinated.toInt().toString()
             txtTotalVaccine.text = currentCountry.total_vaccinations.toInt().toString()
             txtLastDateVaccine.text = currentCountry.date
-//            root.setOnClickListener { listener.onClickItem(currentCountry) }
+            root.setOnClickListener { listener.onClickItem(currentCountry) }
         }
     }
 
-    override fun getItemCount(): Int {
-        return list.size
-    }
+    override fun getItemCount() = list.size
 
     class CountryHolderView(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val binding = ItemCountryBinding.bind(itemView)

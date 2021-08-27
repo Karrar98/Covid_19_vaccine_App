@@ -32,12 +32,13 @@
         <entry key="..\:/Users/dell/Desktop/Covid_19_vaccine_App/app/src/main/res/layout/fragment_corona.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/dell/Desktop/Covid_19_vaccine_App/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/drawable/box_search_view.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/drawable/dailyshape.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/activity_home.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/activity_main.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/activity_search.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_about_team.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_corona.xml" value="0.209375" />
-        <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_corona_protection.xml" value="0.209375" />
+        <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_corona_protection.xml" value="0.25" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_corona_reasons.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_corona_syndrome.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_corona_virus.xml" value="0.209375" />
@@ -45,6 +46,8 @@
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_search.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_vaccine_info.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/item_country.xml" value="0.209375" />
+        <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/item_symptoms_left.xml" value="0.209375" />
+        <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/item_symptoms_right.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/layout_corona_page_one.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/layout_corona_page_three.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/layout_corona_page_two.xml" value="0.209375" />
