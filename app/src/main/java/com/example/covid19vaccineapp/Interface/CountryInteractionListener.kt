@@ -1,4 +1,4 @@
-package com.example.covid19vaccineapp
+package com.example.covid19vaccineapp.Interface
 
 import com.example.covid19vaccineapp.model.VaccineDetails
 

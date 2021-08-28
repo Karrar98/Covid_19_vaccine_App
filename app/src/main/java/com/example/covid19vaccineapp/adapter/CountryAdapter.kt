@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.covid19vaccineapp.CountryInteractionListener
+import com.example.covid19vaccineapp.Interface.CountryInteractionListener
 import com.example.covid19vaccineapp.R
 import com.example.covid19vaccineapp.databinding.ItemCountryBinding
 import com.example.covid19vaccineapp.model.VaccineDetails

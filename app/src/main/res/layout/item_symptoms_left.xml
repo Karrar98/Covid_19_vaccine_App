@@ -12,11 +12,11 @@
         android:layout_marginStart="12dp"
         style="@style/textViewParagraph"
         android:layout_marginTop="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imgSymptoms"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCorona"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideLine_right"
-        app:layout_constraintStart_toEndOf="@+id/imgSymptoms"
-        app:layout_constraintTop_toTopOf="@+id/imgSymptoms" />
+        app:layout_constraintStart_toEndOf="@+id/imgCorona"
+        app:layout_constraintTop_toTopOf="@+id/imgCorona" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideLine_right"
@@ -33,11 +33,11 @@
         app:layout_constraintGuide_percent="0.05" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imgSymptoms"
+        android:id="@+id/imgCorona"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="24dp"
-        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        android:padding="6dp"
         android:src="@drawable/moh_img"
         app:layout_constraintEnd_toStartOf="@+id/txtSymptoms"
         app:layout_constraintStart_toEndOf="@+id/guideLine_left"

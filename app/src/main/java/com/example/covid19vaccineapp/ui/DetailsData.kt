@@ -1,7 +1,6 @@
-package com.example.covid19vaccineapp
+package com.example.covid19vaccineapp.ui
 
 import android.os.Bundle
-import android.provider.SyncStateContract
 import androidx.appcompat.app.AppCompatActivity
 import com.example.covid19vaccineapp.Utilse.Constants
 import com.example.covid19vaccineapp.databinding.DetailsDataBinding

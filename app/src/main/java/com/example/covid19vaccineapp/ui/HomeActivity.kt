@@ -1,10 +1,7 @@
-package com.example.covid19vaccineapp
+package com.example.covid19vaccineapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.view.View
 import androidx.fragment.app.Fragment
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
 import com.example.covid19vaccineapp.Utilse.Constants.BottomNavigationIndex.HOME_PAGE
@@ -20,8 +17,7 @@ import com.example.covid19vaccineapp.databinding.ActivityHomeBinding
 import com.example.covid19vaccineapp.fragments.fragmentHomePage.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
-import android.view.Window
-import android.view.WindowManager
+import com.example.covid19vaccineapp.R
 
 class HomeActivity : AppCompatActivity() {
 

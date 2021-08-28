@@ -1,16 +1,12 @@
 package com.example.covid19vaccineapp.fragments.fragmentHomePage
 
-import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
-import androidx.fragment.app.Fragment
-import com.example.covid19vaccineapp.adapter.CoronaVirusPagerAdapter
+import com.example.covid19vaccineapp.R
+import com.example.covid19vaccineapp.Utilse.DataList
+import com.example.covid19vaccineapp.adapter.CoronaAdapter
+import com.example.covid19vaccineapp.adapter.CoronaMultiViewAdapter
 import com.example.covid19vaccineapp.databinding.FragmentCoronaVirusBinding
 import com.example.covid19vaccineapp.fragments.BaseFragment
-import com.example.covid19vaccineapp.fragments.fragmentCoronaVirus.CoronaFragment
-import com.example.covid19vaccineapp.fragments.fragmentCoronaVirus.CoronaProtectionFragment
-import com.example.covid19vaccineapp.fragments.fragmentCoronaVirus.CoronaReasonsFragment
-import com.example.covid19vaccineapp.fragments.fragmentCoronaVirus.CoronaSymptomsFragment
 
 class CoronaVirusFragment : BaseFragment<FragmentCoronaVirusBinding>() {
 
@@ -19,27 +15,28 @@ class CoronaVirusFragment : BaseFragment<FragmentCoronaVirusBinding>() {
     override val bindingInflater: (LayoutInflater) -> FragmentCoronaVirusBinding =
         FragmentCoronaVirusBinding::inflate
 
-    private lateinit var coronaVirusPagerAdapter: CoronaVirusPagerAdapter
-
-    private val listFragment = listOf<Fragment>(
-        CoronaFragment(), CoronaReasonsFragment(),
-        CoronaSymptomsFragment(), CoronaProtectionFragment()
-    )
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        initViewPager()
+    override fun setup() {
+        initRecyclerViewReasons()
+        initRecyclerViewSymptoms()
+        initRecyclerViewProtection()
     }
 
-    override fun setup() {
+    private fun initRecyclerViewReasons() {
+        val adapter = CoronaAdapter(DataList().listTitleReasons, DataList().listImageReasons)
+        binding!!.recyclerReasons.adapter = adapter
+    }
 
+    private fun initRecyclerViewSymptoms() {
+        val adapter = CoronaAdapter(DataList().listTitleSymptoms, DataList().listImageSymptoms)
+        binding!!.recyclerSymptoms.adapter = adapter
+    }
+
+    private fun initRecyclerViewProtection() {
+        val adapter = CoronaMultiViewAdapter(DataList().listTitleProtection, DataList().listImageProtection)
+        binding!!.recyclerProtection.adapter = adapter
     }
 
     override fun addCallBack() {
 
-    }
-
-    private fun initViewPager() {
-        coronaVirusPagerAdapter = CoronaVirusPagerAdapter(childFragmentManager, listFragment)
-        binding!!.coronaViewpager.adapter = coronaVirusPagerAdapter
     }
 }

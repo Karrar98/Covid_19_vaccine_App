@@ -40,11 +40,13 @@
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_corona.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_corona_protection.xml" value="0.25" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_corona_reasons.xml" value="0.209375" />
+        <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_corona_symptoms.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_corona_syndrome.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_corona_virus.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_home.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_search.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/fragment_vaccine_info.xml" value="0.209375" />
+        <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/item_corona.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/item_country.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/item_symptoms_left.xml" value="0.209375" />
         <entry key="..\:/Users/karrar/AndroidStudioProjects/Covid19vaccineApp/app/src/main/res/layout/item_symptoms_right.xml" value="0.209375" />
@@ -56,7 +58,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
