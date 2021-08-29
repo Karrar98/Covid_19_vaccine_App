@@ -1,12 +1,15 @@
 package com.example.covid19vaccineapp.fragments.fragmentHomePage
 
+import android.content.Intent
 import android.view.LayoutInflater
 import com.example.covid19vaccineapp.Interface.CountryInteractionListener
+import com.example.covid19vaccineapp.Utilse.Constants
 import com.example.covid19vaccineapp.Utilse.DataManger
 import com.example.covid19vaccineapp.adapter.CountryAdapter
 import com.example.covid19vaccineapp.databinding.FragmentHomeBinding
 import com.example.covid19vaccineapp.fragments.BaseFragment
 import com.example.covid19vaccineapp.model.VaccineDetails
+import com.example.covid19vaccineapp.ui.DetailsData
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(), CountryInteractionListener {
 
@@ -16,7 +19,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), CountryInteractionList
         FragmentHomeBinding::inflate
 
     override fun setup() {
-        val adapter = CountryAdapter(DataManger.getDataCountry(), this)
+        DataManger.mapData()
+        DataManger.getLastDataCountry()
+        val adapter = CountryAdapter(DataManger.listLastDataCountry, this)
         binding!!.recyclerCountry.adapter = adapter
     }
 
@@ -24,7 +29,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), CountryInteractionList
     }
 
     override fun onClickItem(vaccine: VaccineDetails) {
-//        val intent = Intent(context?.applicationContext, DetailsData::class.java)
+        val intent = Intent(context?.applicationContext, DetailsData::class.java)
+        startActivity(intent)
 //        intent.putExtra(Constants.VACCINE, vaccine)
     }
 

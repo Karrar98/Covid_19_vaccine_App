@@ -5,56 +5,42 @@ import java.util.*
 import java.util.Locale.getDefault
 
 object DataManger {
-    private val vaccineDetailsList = mutableListOf<VaccineDetails>()
-    private var listDataCountry = mutableListOf<VaccineDetails>()
-    private var lastDataCountries = mutableListOf<VaccineDetails>()
-    private var countryIndex = 0
+    private val listVaccineDetails = mutableListOf<VaccineDetails>()
+    val listLastDataCountry = mutableListOf<VaccineDetails>()
+    private var listDataCountry = mutableMapOf<String, MutableList<VaccineDetails>>()
+    private var searchDataCountry = mutableListOf<VaccineDetails>()
 
-    fun addVaccineDetails(vaccineData: VaccineDetails) = vaccineDetailsList.add(vaccineData)
+    fun addVaccineDetails(vaccineData: VaccineDetails) = listVaccineDetails.add(vaccineData)
 
-    fun getListCountry(): MutableSet<String> = vaccineDetailsList.map { it.country }.toMutableSet()
+    fun getListCountry() = listVaccineDetails.map { it.country }.toMutableSet()
 
-    fun getVaccineDetails() = vaccineDetailsList
+    fun getCountry(country: String): MutableList<VaccineDetails> = listVaccineDetails.filter {
+        it.country == country
+    }.toMutableList()
 
-    fun getCountry(country: String) = vaccineDetailsList.let {
-        listDataCountry = it.filter {
+    fun mapData() {
+        getListCountry().forEach {
+            listDataCountry[it] = getCountry(it)
+        }
+    }
+
+    fun getLastDataCountry() = getListCountry().forEach { countryName ->
+        listDataCountry[countryName]?.lastIndex?.let { listDataCountry[countryName]?.get(it) }
+            ?.let {
+                listLastDataCountry.add(
+                    it
+                )
+            }
+    }
+
+    fun searchCountry(country: String) = listVaccineDetails.let {
+        searchDataCountry = it.filter {
             it.country.lowercase(Locale.getDefault())
                 .equals(country.lowercase(Locale.getDefault()), ignoreCase = true)
         }.toMutableList()
         it.associateBy(
             keySelector = { country.lowercase(getDefault()) },
-            valueTransform = { listDataCountry }
+            valueTransform = { searchDataCountry }
         )
     }
-
-    fun nextCountry() {
-        countryIndex++
-    }
-
-    fun previousCountry() {
-        countryIndex--
-    }
-
-    fun getCountryIndex(): Int {
-        if (countryIndex == -1) {
-            countryIndex = getListCountry().size-1
-        } else if (countryIndex > getListCountry().size -1) {
-            countryIndex = 0
-        }
-        return countryIndex
-    }
-
-
-
-    fun getDataCountry() : MutableList<VaccineDetails> {
-        lateinit var data: VaccineDetails
-        getListCountry().forEach {
-            getCountry(it).forEach { dataCountry ->
-                data = dataCountry.value[dataCountry.value.size - 1]
-                lastDataCountries.add(data)
-            }
-        }
-        return lastDataCountries
-    }
-    
 }

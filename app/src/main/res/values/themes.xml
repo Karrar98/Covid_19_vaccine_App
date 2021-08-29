@@ -25,6 +25,11 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowSplashscreenContent" tools:targetApi="o">@drawable/ic_vaccine</item>
+        <item name="android:statusBarColor">#edf0f3</item>
+    </style>
+
 
     <!--  style search view city   -->
     <style name="searchViewCity">

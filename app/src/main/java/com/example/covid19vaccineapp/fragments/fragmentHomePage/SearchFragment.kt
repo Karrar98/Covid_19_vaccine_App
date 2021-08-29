@@ -36,29 +36,29 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(){
     private fun searchSubmit(country: String) {
         binding!!.apply {
             changeVisibility(true)
-            if(country.isEmpty() || DataManger.getCountry(country.lowercase(Locale.getDefault()))
+            if(country.isEmpty() || DataManger.searchCountry(country.lowercase(Locale.getDefault()))
                         [country.lowercase(Locale.getDefault())].isNullOrEmpty()) {
-                lottieError.visibility = View.VISIBLE
+                codeError.visibility = View.VISIBLE
                 changeVisibility(false)
             }else {
                 setData(country)
                 changeVisibility(true)
             }
-            lottieSearch.isVisible = false
+            imgSearch.isVisible = false
         }
     }
 
     private fun searchTextChange(newText: String){
         binding!!.apply {
-          lottieError .visibility = View.GONE
+          codeError.visibility = View.GONE
             changeVisibility(false)
-            lottieSearch.isVisible = true
+            imgSearch.isVisible = true
             pieChart.isVisible = false
         }
     }
 
     private fun setData(country: String) {
-        DataManger.getCountry(country).forEach { dataCountry ->
+        DataManger.searchCountry(country).forEach { dataCountry ->
             val data = dataCountry.value[dataCountry.value.size-1]
             binding!!.apply {
                 txtPeopleVaccine.text = data.people_vaccinated.toInt().toString()
@@ -86,7 +86,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(){
     fun changeVisibility(state: Boolean){
         binding!!.apply {
             cardCountry.isVisible = state
-            lottieSearch.isVisible = !state
+            imgSearch.isVisible = !state
             pieChart.isVisible = state
             shapesearchimg.isVisible = state
         }

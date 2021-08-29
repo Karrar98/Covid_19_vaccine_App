@@ -141,17 +141,16 @@
 
     </androidx.cardview.widget.CardView>
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/lottie_error"
+    <ImageView
+        android:id="@+id/code_error"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:visibility="gone"
+        android:src="@drawable/ic_code_error"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchViewCountry"
-        app:lottie_autoPlay="true"
-        app:lottie_rawRes="@raw/error_404" />
+        app:layout_constraintTop_toBottomOf="@+id/searchViewCountry" />
 
     <!--    <TextView-->
     <!--        android:id="@+id/txtDecryptionSearch"-->
@@ -163,19 +162,17 @@
     <!--        app:layout_constraintStart_toStartOf="@+id/lottie_search"-->
     <!--        app:layout_constraintTop_toBottomOf="@+id/lottie_search" />-->
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/lottie_search"
+    <ImageView
+        android:id="@+id/img_search"
         android:layout_width="320dp"
         android:layout_height="350dp"
+        android:src="@drawable/ic_search_view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchViewCountry"
-        app:layout_constraintVertical_bias="0.329"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/search" />
+        app:layout_constraintVertical_bias="0.329" />
 
     <org.eazegraph.lib.charts.PieChart
         android:id="@+id/pieChart"

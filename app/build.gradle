@@ -50,9 +50,6 @@ dependencies {
     //Meow BottomNavigationView library
     implementation 'com.etebarian:meow-bottom-navigation:1.2.0'
 
-    //lottie animation library
-    implementation 'com.airbnb.android:lottie:4.0.0'
-
     // chart library
     implementation 'com.github.blackfizz:eazegraph:1.2.2@aar'
     implementation 'com.nineoldandroids:library:2.4.0'
