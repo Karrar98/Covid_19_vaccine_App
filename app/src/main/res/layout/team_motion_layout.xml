@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_gravity="center"
+    app:layoutDescription="@xml/text_team_scene">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:elevation="8dp"
+        android:rotation="90"
         app:cardCornerRadius="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/cardView4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread_inside">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -63,12 +69,14 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView4"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:elevation="8dp"
+        android:rotation="180"
         app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cardView3"
-        app:layout_constraintTop_toTopOf="@+id/cardView3">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -113,18 +121,18 @@
 
     </androidx.cardview.widget.CardView>
 
-
-
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/cardView2"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="24dp"
+        android:layout_height="wrap_content"
         android:elevation="8dp"
+        android:rotation="45"
         app:cardCornerRadius="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/cardView2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAboutApp">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -132,34 +140,34 @@
             android:padding="14dp">
 
             <TextView
-                android:id="@+id/txtNameTeam1"
+                android:id="@+id/txtNameTeam2"
                 style="@style/textNameTeam"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/mohammed_maher"
-                app:layout_constraintEnd_toEndOf="@+id/imgTeam1"
-                app:layout_constraintStart_toStartOf="@+id/imgTeam1"
-                app:layout_constraintTop_toBottomOf="@+id/imgTeam1" />
+                android:text="@string/karrar_jabbar"
+                app:layout_constraintEnd_toEndOf="@+id/imgTeam2"
+                app:layout_constraintStart_toStartOf="@+id/imgTeam2"
+                app:layout_constraintTop_toBottomOf="@+id/imgTeam2" />
 
             <TextView
-                android:id="@+id/txtTypeTeam1"
+                android:id="@+id/txtTypeTeam2"
                 style="@style/textTypeTeamParagraph"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/team_member"
-                app:layout_constraintEnd_toEndOf="@+id/txtNameTeam1"
-                app:layout_constraintStart_toStartOf="@+id/txtNameTeam1"
-                app:layout_constraintTop_toBottomOf="@+id/txtNameTeam1" />
+                app:layout_constraintEnd_toEndOf="@+id/txtNameTeam2"
+                app:layout_constraintStart_toStartOf="@+id/txtNameTeam2"
+                app:layout_constraintTop_toBottomOf="@+id/txtNameTeam2" />
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imgTeam1"
+                android:id="@+id/imgTeam2"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:gravity="center_horizontal"
                 android:padding="12dp"
-                android:src="@drawable/moh_img"
+                android:src="@drawable/kar_img"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -170,69 +178,17 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-    android:id="@+id/cardView2"
-    android:layout_width="wrap_content"
-    android:layout_height="0dp"
-    android:elevation="8dp"
-    app:cardCornerRadius="20dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toEndOf="@+id/cardView"
-    app:layout_constraintTop_toTopOf="@+id/cardView"
-    app:layout_constraintVertical_chainStyle="spread_inside">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="14dp">
-
-        <TextView
-            android:id="@+id/txtNameTeam2"
-            style="@style/textNameTeam"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/karrar_jabbar"
-            app:layout_constraintEnd_toEndOf="@+id/imgTeam2"
-            app:layout_constraintStart_toStartOf="@+id/imgTeam2"
-            app:layout_constraintTop_toBottomOf="@+id/imgTeam2" />
-
-        <TextView
-            android:id="@+id/txtTypeTeam2"
-            style="@style/textTypeTeamParagraph"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/team_member"
-            app:layout_constraintEnd_toEndOf="@+id/txtNameTeam2"
-            app:layout_constraintStart_toStartOf="@+id/txtNameTeam2"
-            app:layout_constraintTop_toBottomOf="@+id/txtNameTeam2" />
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imgTeam2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:gravity="center_horizontal"
-            android:padding="12dp"
-            android:src="@drawable/kar_img"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
         android:id="@+id/cardView5"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:elevation="8dp"
+        android:rotation="225"
         app:cardCornerRadius="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/cardView6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread_inside">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -282,12 +238,14 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView6"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:elevation="8dp"
+        android:rotation="270"
         app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cardView5"
-        app:layout_constraintTop_toTopOf="@+id/cardView5">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -332,4 +290,59 @@
 
     </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/txtNameTeam1"
+                style="@style/textNameTeam"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/mohammed_maher"
+                app:layout_constraintEnd_toEndOf="@+id/imgTeam1"
+                app:layout_constraintStart_toStartOf="@+id/imgTeam1"
+                app:layout_constraintTop_toBottomOf="@+id/imgTeam1" />
+
+            <TextView
+                android:id="@+id/txtTypeTeam1"
+                style="@style/textTypeTeamParagraph"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/team_member"
+                app:layout_constraintEnd_toEndOf="@+id/txtNameTeam1"
+                app:layout_constraintStart_toStartOf="@+id/txtNameTeam1"
+                app:layout_constraintTop_toBottomOf="@+id/txtNameTeam1" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgTeam1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:gravity="center_horizontal"
+                android:padding="12dp"
+                android:src="@drawable/moh_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

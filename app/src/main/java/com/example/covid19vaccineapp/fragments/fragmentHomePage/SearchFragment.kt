@@ -1,5 +1,6 @@
 package com.example.covid19vaccineapp.fragments.fragmentHomePage
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.SearchView
@@ -10,6 +11,9 @@ import com.example.covid19vaccineapp.fragments.BaseFragment
 import java.util.*
 import org.eazegraph.lib.models.PieModel
 import android.graphics.Color
+import com.example.covid19vaccineapp.R
+import com.google.android.material.chip.Chip
+import com.google.android.material.chip.ChipGroup
 
 class SearchFragment : BaseFragment<FragmentSearchBinding>(){
 
@@ -34,6 +38,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(){
     }
 
     private fun searchSubmit(country: String) {
+        createChip(country[0])
         binding!!.apply {
             changeVisibility(true)
             if(country.isEmpty() || DataManger.searchCountry(country.lowercase(Locale.getDefault()))
@@ -45,6 +50,12 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(){
                 changeVisibility(true)
             }
             imgSearch.isVisible = false
+        }
+    }
+
+    private fun createChip(firstCharCountry: Char) {
+        DataManger.getCountries(firstCharCountry).forEach {
+            binding!!.chipGroupCountry.addChip(requireContext(), it)
         }
     }
 
@@ -91,4 +102,40 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(){
             shapesearchimg.isVisible = state
         }
     }
+
+    fun ChipGroup.addChip(context: Context, label: String){
+        Chip(context).apply {
+            id = View.generateViewId()
+            text = label
+            isClickable = true
+            isCheckable = true
+            isCheckedIconVisible = false
+            isFocusable = true
+            binding!!.chipGroupCountry.addView(this)
+        }
+    }
+
+//    fun ChipGroup.addChip(context: Context, label: String){
+//        Chip(activity).let {
+//            val chipDraw =
+//                ChipDrawable.createFromAttributes(
+//                    (activity)!!,
+//                    null,
+//                    0,
+//                    R.style.Widget_MaterialComponents_Chip_Choice
+//                )
+//            it.setChipDrawable(chipDraw)
+//            it.isCheckable = false
+//            it.isClickable = false
+//            it.iconStartPadding = 2f
+//            it.setPadding(60, 20, 60, 20)
+//            it.setTextColor(Color.BLACK)
+//            it.setChipBackgroundColorResource(R.color.white)
+//            it.setOnCloseIconClickListener {
+//                binding?.chipGroupCountry?.removeView(it)
+//            }
+//            it.text = label
+//            binding?.chipGroupCountry?.addView(it)
+//        }
+//    }
 }

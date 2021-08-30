@@ -17,9 +17,9 @@ class AboutTeamFragment : BaseFragment<FragmentAboutTeamBinding>() {
     override val bindingInflater: (LayoutInflater) -> FragmentAboutTeamBinding = FragmentAboutTeamBinding::inflate
 
     override fun setup() {
-        initDataTeam()
-        val adapter = TeamAdapter(teamData)
-        binding!!.recyclerViewTeam.adapter = adapter
+//        initDataTeam()
+//        val adapter = TeamAdapter(teamData)
+//        binding!!.recyclerViewTeam.adapter = adapter
     }
 
     override fun addCallBack() {

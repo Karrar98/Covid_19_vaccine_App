@@ -43,4 +43,10 @@ object DataManger {
             valueTransform = { searchDataCountry }
         )
     }
+
+    fun getCountries(firstChar: Char) = listVaccineDetails.filter {
+        it.country.startsWith(
+            firstChar.toUpperCase()
+        )
+    }.map { it.country }.toMutableSet()
 }

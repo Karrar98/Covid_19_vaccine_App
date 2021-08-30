@@ -17,10 +17,10 @@ class DetailsData : AppCompatActivity() {
         binding = DetailsDataBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val vaccine = intent.getSerializableExtra(Constants.VACCINE) as VaccineDetails
-        vaccine.let {
-
-        }
+//        val vaccine = intent.getSerializableExtra(Constants.VACCINE) as VaccineDetails
+//        vaccine.let {
+//
+//        }
 
         setup()
     }
