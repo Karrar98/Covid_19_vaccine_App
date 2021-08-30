@@ -43,26 +43,32 @@
                 android:id="@+id/recyclerCountry"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
-                tools:listitem="@layout/item_country"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                tools:listitem="@layout/item_country" />
 
-            <!--            <org.eazegraph.lib.charts.PieChart-->
-            <!--                android:id="@+id/pieChart"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="300dp"-->
-            <!--                android:elevation="4dp"-->
-            <!--                android:padding="8dp"-->
-            <!--                app:egLegendTextSize="18sp"-->
-            <!--                app:egUsePieRotation="true"-->
-            <!--                app:egValueTextSize="36sp"-->
-            <!--                android:layout_marginTop="12dp"-->
-            <!--                app:layout_constraintEnd_toEndOf="parent"-->
-            <!--                app:layout_constraintStart_toStartOf="parent"-->
-            <!--                app:layout_constraintTop_toBottomOf="@+id/dataCountry" />-->
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barChart"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerCountry" />
+
+            <TextView
+                android:id="@+id/txtTopFive"
+                style="@style/textViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Top 5 Country Vaccine"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/barChart" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

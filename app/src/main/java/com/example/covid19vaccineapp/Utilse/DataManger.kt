@@ -8,7 +8,15 @@ object DataManger {
     private val listVaccineDetails = mutableListOf<VaccineDetails>()
     val listLastDataCountry = mutableListOf<VaccineDetails>()
     private var listDataCountry = mutableMapOf<String, MutableList<VaccineDetails>>()
+    private var listTopDataCountry = mutableMapOf<String, MutableList<VaccineDetails>>()
     private var searchDataCountry = mutableListOf<VaccineDetails>()
+    private val listTopCountry = mutableListOf<String>(
+        "China",
+        "United States",
+        "Brazil",
+        "Germany",
+        "United Kingdom",
+    )
 
     fun addVaccineDetails(vaccineData: VaccineDetails) = listVaccineDetails.add(vaccineData)
 
@@ -26,6 +34,16 @@ object DataManger {
 
     fun getLastDataCountry() = getListCountry().forEach { countryName ->
         listDataCountry[countryName]?.lastIndex?.let { listDataCountry[countryName]?.get(it) }
+            ?.let {
+                listLastDataCountry.add(
+                    it
+                )
+            }
+    }
+
+
+    fun getTopVaccineCountry() = listTopCountry.forEach { countryName ->
+        listTopDataCountry[countryName]?.lastIndex?.let { listTopDataCountry[countryName]?.get(it) }
             ?.let {
                 listLastDataCountry.add(
                     it
