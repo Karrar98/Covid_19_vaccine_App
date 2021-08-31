@@ -10,16 +10,13 @@
     <androidx.constraintlayout.motion.widget.MotionLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="@dimen/distanceLargeIII"
         app:layoutDescription="@xml/text_team_scene">
 
         <View
             android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp"
             android:background="#cce5f1"
             app:layout_constraintDimensionRatio="16:9"
             app:layout_constraintEnd_toEndOf="parent"
@@ -29,8 +26,7 @@
         <ImageView
             android:id="@+id/waveimg"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginTop="0dp"
+            android:layout_height="@dimen/distance_300"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_wave_bg_header"
             app:layout_constraintEnd_toEndOf="parent"
@@ -40,10 +36,10 @@
         <ImageView
             android:id="@+id/imgCovid"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
+            android:layout_height="@dimen/distance_300"
+            android:layout_marginEnd="@dimen/distanceVerySmall"
+            android:layout_marginStart="@dimen/distanceVerySmall"
+            android:layout_marginTop="@dimen/distanceLarge"
             android:src="@drawable/c"
             app:layout_constraintDimensionRatio="16:9"
             app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +51,7 @@
             style="@style/textViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="130dp"
+            android:layout_marginTop="@dimen/distance_130"
             android:text="@string/app_name"
             app:layout_constraintBottom_toTopOf="@+id/txtAboutApp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -66,16 +62,16 @@
             android:id="@+id/txtAboutApp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="@dimen/distanceVerySmall"
+            android:layout_marginStart="@dimen/distanceVerySmall"
+            android:layout_marginBottom="@dimen/distanceLarge"
             android:justificationMode="inter_word"
-            android:padding="16dp"
+            android:padding="@dimen/distanceNormal"
             android:text="@string/about_app"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#160E2C"
-            android:textSize="16sp"
+            android:textSize="@dimen/textSizeTitle"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -86,10 +82,10 @@
             android:id="@+id/cardView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:elevation="8dp"
+            android:layout_marginTop="@dimen/distanceLarge"
+            android:elevation="@dimen/distanceVerySmall"
             android:rotation="90"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="@dimen/distance_20"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -99,14 +95,14 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="14dp">
+                android:padding="@dimen/distance_14">
 
                 <TextView
                     android:id="@+id/txtNameTeam3"
                     style="@style/textNameTeam"
-                    android:layout_width="120dp"
+                    android:layout_width="@dimen/distance_120"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/distanceVerySmall"
                     android:text="@string/ruqaya_nia_ma"
                     app:layout_constraintEnd_toEndOf="@+id/imgTeam3"
                     app:layout_constraintStart_toStartOf="@+id/imgTeam3"
@@ -117,7 +113,7 @@
                     style="@style/textTypeTeamParagraph"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/distanceVerySmall"
                     android:text="@string/team_member"
                     app:layout_constraintEnd_toEndOf="@+id/txtNameTeam3"
                     app:layout_constraintStart_toStartOf="@+id/txtNameTeam3"
@@ -125,10 +121,10 @@
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/imgTeam3"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="@dimen/distance_100"
+                    android:layout_height="@dimen/distance_100"
                     android:gravity="center_horizontal"
-                    android:padding="12dp"
+                    android:padding="@dimen/distanceSmall"
                     android:src="@drawable/rug_img"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -144,9 +140,9 @@
             android:id="@+id/cardView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:elevation="8dp"
+            android:elevation="@dimen/distanceVerySmall"
             android:rotation="180"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="@dimen/distance_20"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -155,14 +151,14 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="14dp">
+                android:padding="@dimen/distance_14">
 
                 <TextView
                     android:id="@+id/txtNameTeam4"
                     style="@style/textNameTeam"
-                    android:layout_width="120dp"
+                    android:layout_width="@dimen/distance_120"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/distanceVerySmall"
                     android:text="@string/zainab_mahmood"
                     app:layout_constraintEnd_toEndOf="@+id/imgTeam4"
                     app:layout_constraintStart_toStartOf="@+id/imgTeam4"
@@ -173,7 +169,7 @@
                     style="@style/textTypeTeamParagraph"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/distanceVerySmall"
                     android:text="@string/team_member"
                     app:layout_constraintEnd_toEndOf="@+id/txtNameTeam4"
                     app:layout_constraintStart_toStartOf="@+id/txtNameTeam4"
@@ -181,10 +177,10 @@
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/imgTeam4"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="@dimen/distance_100"
+                    android:layout_height="@dimen/distance_100"
                     android:gravity="center_horizontal"
-                    android:padding="12dp"
+                    android:padding="@dimen/distanceSmall"
                     android:src="@drawable/zi_img"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -199,9 +195,9 @@
             android:id="@+id/cardView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:elevation="8dp"
+            android:elevation="@dimen/distanceVerySmall"
             android:rotation="45"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="@dimen/distance_20"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -211,14 +207,14 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="14dp">
+                android:padding="@dimen/distance_14">
 
                 <TextView
                     android:id="@+id/txtNameTeam2"
                     style="@style/textNameTeam"
-                    android:layout_width="120dp"
+                    android:layout_width="@dimen/distance_120"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/distanceVerySmall"
                     android:text="@string/karrar_jabbar"
                     app:layout_constraintEnd_toEndOf="@+id/imgTeam2"
                     app:layout_constraintStart_toStartOf="@+id/imgTeam2"
@@ -229,7 +225,7 @@
                     style="@style/textTypeTeamParagraph"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/distanceVerySmall"
                     android:text="@string/team_member"
                     app:layout_constraintEnd_toEndOf="@+id/txtNameTeam2"
                     app:layout_constraintStart_toStartOf="@+id/txtNameTeam2"
@@ -237,10 +233,10 @@
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/imgTeam2"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="@dimen/distance_100"
+                    android:layout_height="@dimen/distance_100"
                     android:gravity="center_horizontal"
-                    android:padding="12dp"
+                    android:padding="@dimen/distanceSmall"
                     android:src="@drawable/kar_img"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -255,11 +251,11 @@
             android:id="@+id/cardView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="64dp"
-            android:elevation="8dp"
+            android:layout_marginTop="@dimen/distanceLarge"
+            android:layout_marginBottom="@dimen/distanceLargeIII"
+            android:elevation="@dimen/distanceVerySmall"
             android:rotation="225"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="@dimen/distance_20"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -269,14 +265,14 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="14dp">
+                android:padding="@dimen/distance_14">
 
                 <TextView
                     android:id="@+id/txtNameTeam5"
                     style="@style/textNameTeam"
-                    android:layout_width="120dp"
+                    android:layout_width="@dimen/distance_120"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/distanceVerySmall"
                     android:text="@string/shahlaa_haider"
                     app:layout_constraintEnd_toEndOf="@+id/imgTeam5"
                     app:layout_constraintStart_toStartOf="@+id/imgTeam5"
@@ -287,7 +283,7 @@
                     style="@style/textTypeTeamParagraph"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/distanceVerySmall"
                     android:text="@string/team_member"
                     app:layout_constraintEnd_toEndOf="@+id/txtNameTeam5"
                     app:layout_constraintStart_toStartOf="@+id/txtNameTeam5"
@@ -295,10 +291,10 @@
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/imgTeam5"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="@dimen/distance_100"
+                    android:layout_height="@dimen/distance_100"
                     android:gravity="center_horizontal"
-                    android:padding="12dp"
+                    android:padding="@dimen/distanceSmall"
                     android:src="@drawable/shahlaa_img"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -314,9 +310,9 @@
             android:id="@+id/cardView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:elevation="8dp"
+            android:elevation="@dimen/distanceVerySmall"
             android:rotation="270"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="@dimen/distance_20"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -325,14 +321,14 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="14dp">
+                android:padding="@dimen/distance_14">
 
                 <TextView
                     android:id="@+id/txtNameTeam6"
                     style="@style/textNameTeam"
-                    android:layout_width="120dp"
+                    android:layout_width="@dimen/distance_120"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/distanceVerySmall"
                     android:text="@string/tamara_mouneer"
                     app:layout_constraintEnd_toEndOf="@+id/imgTeam6"
                     app:layout_constraintStart_toStartOf="@+id/imgTeam6"
@@ -343,7 +339,7 @@
                     style="@style/textTypeTeamParagraph"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/distanceVerySmall"
                     android:text="@string/team_member"
                     app:layout_constraintEnd_toEndOf="@+id/txtNameTeam6"
                     app:layout_constraintStart_toStartOf="@+id/txtNameTeam6"
@@ -351,10 +347,10 @@
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/imgTeam6"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="@dimen/distance_100"
+                    android:layout_height="@dimen/distance_100"
                     android:gravity="center_horizontal"
-                    android:padding="12dp"
+                    android:padding="@dimen/distanceSmall"
                     android:src="@drawable/tamara_img"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -369,9 +365,9 @@
             android:id="@+id/cardView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:elevation="8dp"
-            app:cardCornerRadius="20dp"
+            android:layout_marginTop="@dimen/distanceLarge"
+            android:elevation="@dimen/distanceVerySmall"
+            app:cardCornerRadius="@dimen/distance_20"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -380,14 +376,14 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="14dp">
+                android:padding="@dimen/distance_14">
 
                 <TextView
                     android:id="@+id/txtNameTeam1"
                     style="@style/textNameTeam"
-                    android:layout_width="120dp"
+                    android:layout_width="@dimen/distance_120"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/distanceVerySmall"
                     android:text="@string/mohammed_maher"
                     app:layout_constraintEnd_toEndOf="@+id/imgTeam1"
                     app:layout_constraintStart_toStartOf="@+id/imgTeam1"
@@ -398,7 +394,7 @@
                     style="@style/textTypeTeamParagraph"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/distanceVerySmall"
                     android:text="@string/team_member"
                     app:layout_constraintEnd_toEndOf="@+id/txtNameTeam1"
                     app:layout_constraintStart_toStartOf="@+id/txtNameTeam1"
@@ -406,10 +402,10 @@
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/imgTeam1"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="@dimen/distance_100"
+                    android:layout_height="@dimen/distance_100"
                     android:gravity="center_horizontal"
-                    android:padding="12dp"
+                    android:padding="@dimen/distanceSmall"
                     android:src="@drawable/moh_img"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -420,6 +416,8 @@
 
         </androidx.cardview.widget.CardView>
 
+
+<!-- Recycler View for team -->
 <!--        <androidx.recyclerview.widget.RecyclerView-->
 <!--            android:id="@+id/recyclerViewTeam"-->
 <!--            android:layout_width="match_parent"-->

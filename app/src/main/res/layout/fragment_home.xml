@@ -2,10 +2,9 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="@color/white"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".ui.HomeActivity">
@@ -24,9 +23,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center|top"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="@dimen/distanceLargeI"
             android:background="@drawable/shaperelativlayout"
-            android:paddingBottom="64dp">
+            android:paddingBottom="@dimen/distanceLargeIII">
 
             <TextView
                 android:id="@+id/txtTitle"
@@ -34,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/coronavirus_pandemic_covid_19"
-                android:textSize="24sp"
+                android:textSize="@dimen/textSizeTitleIII"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -52,9 +51,9 @@
 
             <com.github.mikephil.charting.charts.BarChart
                 android:id="@+id/barChart"
-                android:layout_width="0dp"
-                android:layout_height="300dp"
-                android:layout_marginTop="12dp"
+                android:layout_width="@dimen/distance_0"
+                android:layout_height="@dimen/distance_300"
+                android:layout_marginTop="@dimen/distanceSmall"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recyclerCountry" />
@@ -64,8 +63,8 @@
                 style="@style/textViewTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Top 5 Country Vaccine"
-                android:textSize="24sp"
+                android:text="@string/top_5_country_vaccine"
+                android:textSize="@dimen/textSizeTitleIII"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/barChart" />
@@ -77,8 +76,8 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="330dp"
-        android:background="#fff"
+        android:layout_height="@dimen/distance_330"
+        android:background="@color/white"
         android:fitsSystemWindows="true">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout

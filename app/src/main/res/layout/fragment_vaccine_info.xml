@@ -5,22 +5,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="@color/white"
     android:scrollbars="none"
     tools:context=".fragments.fragmentHomePage.VaccineInfoFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="52dp">
+        android:paddingBottom="@dimen/distance_52">
 
         <View
             android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp"
             android:background="#cce5f1"
             app:layout_constraintDimensionRatio="16:9"
             app:layout_constraintEnd_toEndOf="parent"
@@ -30,8 +27,7 @@
         <ImageView
             android:id="@+id/waveimg"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginTop="0dp"
+            android:layout_height="@dimen/distance_300"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_wave_bg_header"
             app:layout_constraintEnd_toEndOf="parent"
@@ -42,9 +38,9 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="@dimen/distanceVerySmall"
+            android:layout_marginTop="@dimen/distanceLarge"
+            android:layout_marginEnd="@dimen/distanceVerySmall"
             android:src="@drawable/ic_vaksinasi"
             app:layout_constraintDimensionRatio="16:9"
             app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +50,7 @@
         <TextView
             android:id="@+id/titletv"
             style="@style/textViewTitle"
-            android:layout_marginTop="130dp"
+            android:layout_marginTop="@dimen/distance_130"
             android:text="@string/vaccine_information"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -79,17 +75,17 @@
         <TextView
             android:id="@+id/infoph3tv"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="8dp"
+            android:layout_height="@dimen/distance_0"
+            android:layout_marginStart="@dimen/distanceVerySmall"
+            android:layout_marginTop="@dimen/distance_28"
+            android:layout_marginEnd="@dimen/distanceVerySmall"
             android:justificationMode="inter_word"
-            android:lineSpacingExtra="4dp"
+            android:lineSpacingExtra="@dimen/distance_4"
             android:text="@string/Paragraph3"
             android:textAlignment="textStart"
             android:textAllCaps="false"
             android:textColor="#160E2C"
-            android:textSize="16sp"
+            android:textSize="@dimen/textSizeTitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/infoph2tv" />

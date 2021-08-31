@@ -44,4 +44,8 @@
     <string name="hand_sanitizer">Hand Sanitizer</string>
     <string name="protection">Protection</string>
     <string name="corona">Corona</string>
+    <string name="what_do_you_know_about_covid_19">What do you know about covid 19?</string>
+    <string name="symptoms">Symptoms</string>
+    <string name="top_5_country_vaccine">Top 5 Country Vaccine</string>
+    <string name="country">Country</string>
 </resources>

@@ -8,10 +8,10 @@
     <TextView
         android:id="@+id/txtSymptoms"
         style="@style/textViewParagraph"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/distance_0"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="@dimen/distance_0"
         android:textAlignment="textEnd"
         app:layout_constraintBottom_toBottomOf="@+id/imgCorona"
         app:layout_constraintEnd_toStartOf="@+id/imgCorona"
@@ -20,10 +20,10 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imgCorona"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="8dp"
-        android:padding="6dp"
+        android:layout_width="@dimen/distance_100"
+        android:layout_height="@dimen/distance_100"
+        android:layout_marginTop="@dimen/distanceVerySmall"
+        android:padding="@dimen/distanceVerySmall"
         android:src="@drawable/moh_img"
         app:layout_constraintEnd_toStartOf="@+id/guideLine_right"
         app:layout_constraintStart_toEndOf="@+id/txtSymptoms"
