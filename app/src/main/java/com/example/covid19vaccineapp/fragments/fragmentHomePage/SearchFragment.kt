@@ -38,7 +38,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(){
     }
 
     private fun searchSubmit(country: String) {
-        createChip(country[0])
+//        createChip(country[0])
         binding!!.apply {
             changeVisibility(true)
             if(country.isEmpty() || DataManger.searchCountry(country.lowercase(Locale.getDefault()))

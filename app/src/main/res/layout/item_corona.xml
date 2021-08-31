@@ -16,17 +16,18 @@
             android:id="@+id/imgCorona"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:padding="12dp" />
 
         <TextView
             android:id="@+id/txtTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Corona"
             android:padding="12dp"
-            android:layout_marginTop="0dp"
+            android:text="@string/corona"
             android:textAlignment="center"
-            style="@style/textViewParagraph"/>
+            android:textColor="#160E2C"
+            android:textSize="16sp" />
 
     </LinearLayout>
 
