@@ -13,6 +13,7 @@ import org.eazegraph.lib.models.PieModel
 import android.graphics.Color
 import com.example.covid19vaccineapp.R
 import com.google.android.material.chip.Chip
+import com.google.android.material.chip.ChipDrawable
 import com.google.android.material.chip.ChipGroup
 
 class SearchFragment : BaseFragment<FragmentSearchBinding>(){
@@ -50,12 +51,14 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(){
                 changeVisibility(true)
             }
             imgSearch.isVisible = false
+            txtDecryptionSearch.isVisible = false
         }
     }
 
     private fun createChip(firstCharCountry: Char) {
+        binding!!.chipGroupCountry.removeAllViews()
         DataManger.getCountries(firstCharCountry).forEach {
-            binding!!.chipGroupCountry.addChip(requireContext(), it)
+            binding!!.chipGroupCountry.addChip(it)
         }
     }
 
@@ -64,6 +67,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(){
           codeError.visibility = View.GONE
             changeVisibility(false)
             imgSearch.isVisible = true
+            txtDecryptionSearch.isVisible = true
             pieChart.isVisible = false
         }
     }
@@ -79,11 +83,11 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(){
                 txtTotalVaccinations.text = data.total_vaccinations.toInt().toString()
 
                 pieChart.addPieSlice(PieModel("total_vaccinations",
-                    data.total_vaccinations_per_hundred.toFloat(), Color.parseColor("#fed60e")))
+                    data.total_vaccinations_per_hundred.toFloat(), Color.parseColor("#F0987D")))
                 pieChart.addPieSlice(PieModel("people_vaccinated",
-                    data.people_vaccinated_per_hundred.toFloat(), Color.parseColor("#56b8f1")))
+                    data.people_vaccinated_per_hundred.toFloat(), Color.parseColor("#A175F0")))
                 pieChart.addPieSlice(PieModel("people_fully_vaccinated",
-                    data.people_fully_vaccinated_per_hundred.toFloat(), Color.parseColor("#fe6da7")))
+                    data.people_fully_vaccinated_per_hundred.toFloat(), Color.parseColor("#F0E962")))
 
                 pieChart.startAnimation()
             }
@@ -98,12 +102,13 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(){
         binding!!.apply {
             cardCountry.isVisible = state
             imgSearch.isVisible = !state
+            txtDecryptionSearch.isVisible = !state
             pieChart.isVisible = state
             shapesearchimg.isVisible = state
         }
     }
 
-    fun ChipGroup.addChip(context: Context, label: String){
+    fun ChipGroup.addChip(label: String){
         Chip(context).apply {
             id = View.generateViewId()
             text = label
@@ -115,8 +120,8 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(){
         }
     }
 
-//    fun ChipGroup.addChip(context: Context, label: String){
-//        Chip(activity).let {
+//    fun ChipGroup.addChip(label: String){
+//        Chip(context).let {
 //            val chipDraw =
 //                ChipDrawable.createFromAttributes(
 //                    (activity)!!,

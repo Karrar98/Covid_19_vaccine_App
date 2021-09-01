@@ -1,13 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.DetailsData">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/txtCountryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/distanceSmall"
+        android:text="Iraq"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSizeTitleIV"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/txtIsoCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/distanceSmall"
+        android:paddingStart="@dimen/distance_0"
+        android:text="Iraq"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSizeTitleI"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCountryName"
+        app:layout_constraintStart_toEndOf="@+id/txtCountryName" />
+
+    <TextView
+        android:id="@+id/txtPeopleFullyVaccine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/distanceNormal"
+        android:paddingStart="@dimen/distanceNormal"
+        android:text="44.4142"
+        android:textSize="@dimen/textSizeTitleI"
+        app:layout_constraintEnd_toEndOf="@+id/labPeopleFullyVaccine"
+        app:layout_constraintStart_toStartOf="@+id/labPeopleFullyVaccine"
+        app:layout_constraintTop_toTopOf="@+id/txtPeopleVaccine" />
+
+    <TextView
+        android:id="@+id/txtPeopleVaccine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/distanceNormal"
+        android:paddingStart="@dimen/distanceNormal"
+        android:text="44.4142"
+        android:textSize="@dimen/textSizeTitleI"
+        android:layout_marginTop="@dimen/distanceNormal"
+        app:layout_constraintEnd_toEndOf="@+id/labPeopleVaccine"
+        app:layout_constraintStart_toStartOf="@+id/labPeopleVaccine"
+        app:layout_constraintTop_toBottomOf="@+id/txtCountryName" />
+
+    <TextView
+        android:id="@+id/labPeopleVaccine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/distanceVerySmall"
+        android:padding="@dimen/distanceVerySmall"
+        android:text="people vaccinated"
+        android:textSize="@dimen/textSizeParagraphNormal"
+        app:layout_constraintEnd_toStartOf="@+id/labPeopleFullyVaccine"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPeopleVaccine" />
+
+    <TextView
+        android:id="@+id/labPeopleFullyVaccine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/distanceVerySmall"
+        android:padding="@dimen/distanceVerySmall"
+        android:text="people fully vaccinated"
+        android:textSize="@dimen/textSizeParagraphNormal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/labPeopleVaccine"
+        app:layout_constraintTop_toTopOf="@+id/labPeopleVaccine" />
+
+    <TextView
+        android:id="@+id/txtTotalVaccine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/distanceNormal"
+        android:paddingStart="@dimen/distanceNormal"
+        android:text="44.4142"
+        android:textSize="@dimen/textSizeTitleI"
+        android:layout_marginTop="@dimen/distanceNormal"
+        app:layout_constraintEnd_toEndOf="@+id/labPeopleFullyVaccine"
+        app:layout_constraintStart_toStartOf="@+id/labPeopleVaccine"
+        app:layout_constraintTop_toBottomOf="@+id/labPeopleFullyVaccine" />
+
+    <TextView
+        android:id="@+id/labTotalVaccine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/distanceVerySmall"
+        android:padding="@dimen/distanceVerySmall"
+        android:text="people vaccinated"
+        android:textSize="@dimen/textSizeParagraphNormal"
+        app:layout_constraintEnd_toEndOf="@+id/txtTotalVaccine"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/txtTotalVaccine"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalVaccine" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChartCountry"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/distanceNormal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labTotalVaccine" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

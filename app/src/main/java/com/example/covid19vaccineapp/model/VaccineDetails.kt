@@ -1,5 +1,7 @@
 package com.example.covid19vaccineapp.model
 
+import java.io.Serializable
+
 data class VaccineDetails(
     var country : String,
     var iso_code : String,
@@ -12,5 +14,5 @@ data class VaccineDetails(
     var total_vaccinations_per_hundred : Double,
     var people_vaccinated_per_hundred : Double,
     var people_fully_vaccinated_per_hundred : Double,
-    var daily_vaccinations_per_million : Double) {
+    var daily_vaccinations_per_million : Double) : Serializable{
 }

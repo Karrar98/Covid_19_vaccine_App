@@ -78,8 +78,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), CountryInteractionList
 
     override fun onClickItem(vaccine: VaccineDetails) {
         val intent = Intent(context?.applicationContext, DetailsData::class.java)
+        intent.putExtra(Constants.VACCINE, vaccine)
         startActivity(intent)
-//        intent.putExtra(Constants.VACCINE, vaccine)
     }
 
 }

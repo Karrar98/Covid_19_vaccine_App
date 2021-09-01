@@ -62,9 +62,9 @@ object DataManger {
         )
     }
 
-    fun getCountries(firstChar: Char) = listVaccineDetails.filter {
-        it.country.startsWith(
+    fun getCountries(firstChar: Char) = getListCountry().filter {
+        it.startsWith(
             firstChar.toUpperCase()
         )
-    }.map { it.country }.toMutableSet()
+    }.toMutableSet()
 }

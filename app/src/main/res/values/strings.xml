@@ -48,4 +48,5 @@
     <string name="symptoms">Symptoms</string>
     <string name="top_5_country_vaccine">Top 5 Country Vaccine</string>
     <string name="country">Country</string>
+    <string name="what_country_do_you_want_to_search_for">What country do you want to search for ?!</string>
 </resources>

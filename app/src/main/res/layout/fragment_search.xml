@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/distanceLarge"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:cardCornerRadius="@dimen/distanceLarge"
         app:cardElevation="@dimen/distanceSmall"
         app:layout_constraintStart_toStartOf="parent"
@@ -151,26 +151,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchViewCountry" />
 
-    <!--    <TextView-->
-    <!--        android:id="@+id/txtDecryptionSearch"-->
-    <!--        style="@style/textDisplaySearch"-->
-    <!--        android:layout_width="0dp"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="What country do you want to search for ?!"-->
-    <!--        app:layout_constraintEnd_toEndOf="@+id/lottie_search"-->
-    <!--        app:layout_constraintStart_toStartOf="@+id/lottie_search"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/lottie_search" />-->
+    <TextView
+        android:id="@+id/txtDecryptionSearch"
+        style="@style/textDisplaySearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/distanceNormal"
+        android:layout_marginStart="@dimen/distanceNormal"
+        android:text="@string/what_country_do_you_want_to_search_for"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pieChart" />
+
+    <ImageView
+        android:id="@+id/shapesearchimg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_500"
+        android:src="@drawable/shapecoronavirussearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/img_search"
-        android:layout_width="@dimen/distance_320"
-        android:layout_height="@dimen/distance_350"
+        android:layout_width="@dimen/distance_100"
+        android:layout_height="@dimen/distance_100"
         android:src="@drawable/ic_search_view"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/txtDecryptionSearch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchViewCountry"
         app:layout_constraintVertical_bias="0.329" />
 
     <org.eazegraph.lib.charts.PieChart
@@ -187,14 +198,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalChips" />
 
-    <ImageView
-        android:id="@+id/shapesearchimg"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/distance_500"
-        android:src="@drawable/shapecoronavirussearch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <HorizontalScrollView
         android:id="@+id/horizontalChips"
